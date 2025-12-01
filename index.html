@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KNRAJU.ap - Andhra Pradesh Revenue Services</title>
+    <meta name="theme-color" content="#4f46e5">
+    <meta name="description"
+        content="One-stop portal for AP Government Revenue Department services. Access IGRS EC, Adangal, 1B, and more.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="background-gradient"></div>
+
+    <header class="glass-header">
+        <div class="container header-content">
+            <div class="logo">
+                <i class="fa-solid fa-building-columns"></i>
+                <span>KNRAJU.ap</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact" class="btn-primary">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-content">
+                <h1>SAI TEJA DTP WORK CENTRE</h1>
+                <h2>AP Revenue Services <br><span class="highlight">Simplified</span></h2>
+                <p>Access all Andhra Pradesh government land and revenue services in one secure, premium dashboard.</p>
+
+                <div class="search-container glass-card">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" id="serviceSearch" placeholder="Search for services (e.g., EC, Adangal)...">
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services-section container">
+            <div class="section-header">
+                <h2>Available Services</h2>
+                <div class="category-tabs">
+                    <button class="tab active" data-category="all">All</button>
+                    <button class="tab" data-category="registration">Registration</button>
+                    <button class="tab" data-category="meebhoomi">Meebhoomi</button>
+                    <button class="tab" data-category="map">Map</button>
+                    <button class="tab" data-category="challan">Challan</button>
+                    <button class="tab" data-category="tax">Tax</button>
+                </div>
+            </div>
+
+            <div class="services-grid" id="servicesGrid">
+                <!-- Services will be injected here by JS -->
+            </div>
+        </section>
+
+        <section id="about" class="about-section container">
+            <div class="glass-card about-content">
+                <h2>About SAI TEJA DTP WORK CENTRE</h2>
+                <p>All type of Lands, houses, apartments, plots, bank mortgage registrations, marriage certificates will
+                    be done here.</p>
+                <p>ECs, copies, market values will be provided.</p>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <i class="fa-solid fa-bolt"></i>
+                        <span>Fast Access</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <span>Secure Links</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fa-solid fa-check-double"></i>
+                        <span>Verified Sources</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section container">
+            <div class="glass-card contact-content">
+                <h2>Contact Us</h2>
+                <p>Have questions or need assistance with our services? Reach out to SAI TEJA DTP WORK CENTRE.</p>
+
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <div class="icon-box">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div>
+                            <h3>Visit Us</h3>
+                            <p>Near Register office , Beside ankamma boddu centre,<br>Nallapadu, Guntur,A.P-522005.</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="icon-box">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div>
+                            <h3>Call Us</h3>
+                            <p><a href="tel:+919703585992">+91 9703585992</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="icon-box">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h3>Email Us</h3>
+                            <p><a href="mailto:saitejadtpworkcenter@gmail.com">saitejadtpworkcenter@gmail.com</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="glass-footer">
+        <div class="container footer-content">
+            <p>&copy; 2024 KNRAJU.ap. Private Dashboard.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
