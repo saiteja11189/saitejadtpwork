@@ -119,12 +119,5 @@ const services = [
         icon: "fa-ring",
         category: "registration"
     },
-    {
-        id: 16,
-        name: "AP Cadastral Maps",
-        description: "View cadastral maps and FMB via BhuNaksha.",
-        url: "https://bhunaksha.ap.gov.in/",
-        icon: "fa-map-location-dot",
-        category: "map"
-    }
+
 ];
