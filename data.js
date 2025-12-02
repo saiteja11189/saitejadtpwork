@@ -122,8 +122,8 @@ const services = [
     {
         id: 16,
         name: "AP Cadastral Maps",
-        description: "View cadastral maps of Andhra Pradesh.",
-        url: "https://apsac.ap.gov.in/dashboard-staging/ap-cadastral-maps/",
+        description: "View cadastral maps and FMB via BhuNaksha.",
+        url: "https://bhunaksha.ap.gov.in/",
         icon: "fa-map-location-dot",
         category: "map"
     }
