@@ -118,5 +118,13 @@ const services = [
         url: "https://marriage.rs.ap.gov.in/hmr",
         icon: "fa-ring",
         category: "registration"
+    },
+    {
+        id: 16,
+        name: "AP Cadastral Maps",
+        description: "View cadastral maps of Andhra Pradesh.",
+        url: "https://apsac.ap.gov.in/dashboard-staging/ap-cadastral-maps/",
+        icon: "fa-map-location-dot",
+        category: "map"
     }
 ];
