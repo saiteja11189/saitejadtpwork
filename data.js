@@ -119,5 +119,28 @@ const services = [
         icon: "fa-ring",
         category: "registration"
     },
-
+    {
+        id: 16,
+        name: "Encumbrance Form",
+        description: "Download Encumbrance Certificate Application Form.",
+        url: "forms/encumbrance_certificate_form.pdf",
+        icon: "fa-file-pdf",
+        category: "forms"
+    },
+    {
+        id: 17,
+        name: "Certified Copy Form",
+        description: "Download Certified Copy Application Form.",
+        url: "forms/certified_copy_form.pdf",
+        icon: "fa-file-pdf",
+        category: "forms"
+    },
+    {
+        id: 18,
+        name: "Market Value Form",
+        description: "Download Market Value Assistance Form.",
+        url: "forms/market_value_form.pdf",
+        icon: "fa-file-pdf",
+        category: "forms"
+    }
 ];
