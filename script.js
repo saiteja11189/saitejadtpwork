@@ -3,16 +3,33 @@ document.addEventListener('DOMContentLoaded', () => {
     const searchInput = document.getElementById('serviceSearch');
     const tabs = document.querySelectorAll('.tab');
 
+    // Add global SEO keywords so that searches for office location or owners return all core services
+    const globalKeywords = "nallapadu s.r.o sro revenue guntur kancharla nagaraju ramadevi sai teja dtp";
+    services.forEach(service => {
+        service.keywords = (service.keywords ? service.keywords + " " : "") + globalKeywords;
+    });
+
     // Initial Render
     renderServices(services);
 
     // Search Functionality
     searchInput.addEventListener('input', (e) => {
-        const searchTerm = e.target.value.toLowerCase();
-        const filteredServices = services.filter(service =>
-            service.name.toLowerCase().includes(searchTerm) ||
-            service.description.toLowerCase().includes(searchTerm)
-        );
+        const searchTerm = e.target.value.toLowerCase().trim();
+        
+        // Split search terms to allow matching parts (e.g. searching "nallapadu sro")
+        const searchTerms = searchTerm.split(' ').filter(term => term.length > 0);
+
+        if (searchTerms.length === 0) {
+            renderServices(services);
+            return;
+        }
+
+        const filteredServices = services.filter(service => {
+            const searchableText = `${service.name} ${service.description} ${service.keywords || ''} ${service.category}`.toLowerCase();
+            // Check if all search terms are present in the searchable text
+            return searchTerms.every(term => searchableText.includes(term));
+        });
+        
         renderServices(filteredServices);
     });
 
