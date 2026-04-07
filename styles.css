@@ -407,12 +407,28 @@ nav a:hover {
     margin: 0 0 2rem 0;
 }
 
+.about-profile {
+    float: right;
+    margin: 0 0 1rem 1.5rem;
+    text-align: center;
+}
+
+.about-profile img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
 .features-grid {
     display: flex;
     justify-content: flex-start;
     gap: 3rem;
     margin-top: 3rem;
     flex-wrap: wrap;
+    clear: both;
 }
 
 .feature-item {
