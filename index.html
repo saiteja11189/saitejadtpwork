@@ -76,7 +76,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
@@ -91,14 +91,15 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <div class="background-gradient"></div>
+    <a class="skip-link" href="#services">Skip to services</a>
+    <div class="background-gradient" aria-hidden="true"></div>
 
     <header class="glass-header">
         <div class="container header-content">
-            <div class="logo">
-                <i class="fa-solid fa-building-columns"></i>
-                <span>KNRAJU.AP- S.R.O NALLAPADU  SAI TEJA DTP WORK CENTRE</span>
-            </div>
+            <a class="logo" href="#top" aria-label="Sai Teja DTP Work Centre home">
+                <span class="logo-mark"><i class="fa-solid fa-building-columns"></i></span>
+                <span class="logo-copy"><strong>Sai Teja</strong><small>DTP Work Centre · S.R.O Nallapadu</small></span>
+            </a>
             <nav>
                 <ul>
                     <li><a href="#services">Services</a></li>
@@ -110,15 +111,22 @@
     </header>
 
     <main>
-        <section class="hero">
+        <section class="hero" id="top">
             <div class="container hero-content">
-                <h1>SAI TEJA DTP WORK CENTRE</h1>
-                <h2>AP Revenue Services <br><span class="highlight">Simplified</span></h2>
-                <p>Access all Andhra Pradesh government land and revenue services in one secure, premium dashboard.</p>
+                <div class="hero-kicker"><span></span> Nallapadu, Guntur</div>
+                <h1>Documentation made <em>clear.</em></h1>
+                <p>Access essential Andhra Pradesh registration, land, tax, and revenue services—plus trusted local document assistance in one place.</p>
 
-                <div class="search-container glass-card">
+                <label class="search-container glass-card" for="serviceSearch">
                     <i class="fa-solid fa-magnifying-glass search-icon"></i>
-                    <input type="text" id="serviceSearch" placeholder="Search for services (e.g., EC, Adangal)...">
+                    <span class="sr-only">Search services</span>
+                    <input type="search" id="serviceSearch" placeholder="Search EC, Adangal, tax, forms…" autocomplete="off">
+                    <kbd>/</kbd>
+                </label>
+                <div class="hero-meta" aria-label="Service highlights">
+                    <span><i class="fa-solid fa-circle-check"></i> Official portal links</span>
+                    <span><i class="fa-solid fa-language"></i> Multi-language typing</span>
+                    <span><i class="fa-solid fa-location-dot"></i> Local assistance</span>
                 </div>
             </div>
         </section>
@@ -126,7 +134,11 @@
         <section id="services" class="services-section">
             <div class="container">
                 <div class="section-header">
-                    <h2>Available Services</h2>
+                    <div>
+                        <span class="eyebrow">Quick access</span>
+                        <h2>Available services</h2>
+                        <p>Choose a category or search by service name.</p>
+                    </div>
                     <div class="category-tabs">
                         <button class="tab active" data-category="all">All</button>
                         <button class="tab" data-category="registration">Registration</button>
@@ -138,6 +150,8 @@
                     </div>
                 </div>
 
+                <div class="results-summary" id="resultsSummary" aria-live="polite"></div>
+
                 <div class="services-grid" id="servicesGrid">
                     <!-- Services will be injected here by JS -->
                 </div>
@@ -147,17 +161,22 @@
         <div class="middle-hero">
             <section id="about" class="about-section container">
                 <div class="glass-card about-content">
-                    <h2>About SAI TEJA DTP WORK CENTRE</h2>
-                    <div class="about-profile">
-                        <img src="kancharla-nagaraju.jpg" alt="Kancharla Nagaraju">
+                    <div class="about-intro">
+                        <div>
+                            <span class="eyebrow">Local expertise</span>
+                            <h2>Personal support for important paperwork.</h2>
+                        </div>
+                        <div class="about-profile">
+                            <img src="kancharla-nagaraju.jpg" alt="Kancharla Nagaraju, owner of Sai Teja DTP Work Centre" loading="lazy">
+                            <span>Kancharla Nagaraju</span>
+                        </div>
                     </div>
                     <p>Welcome to <strong>SAI TEJA DTP WORK CENTRE</strong>, your trusted partner for <strong>professional DTP services</strong> and Andhra Pradesh Revenue Department assistance located at <strong>S.R.O Nallapadu, Guntur</strong>. We are proudly managed by <strong>Kancharla Nagaraju</strong> and Document Writer <strong>Kancharla Ramadevi</strong>.</p>
-                    <p>We provide comprehensive <strong>DTP Services</strong>, multi-language typing, document formatting, and preparation. Furthermore, all type of Lands, houses, apartments, plots, bank mortgage registrations, and marriage certificates will be flawlessly documented and processed here.</p>
-                    <p>ECs, copies, market values will be provided.</p>
-                    <p style="background: rgba(79, 70, 229, 0.05); padding: 15px; border-left: 4px solid #4f46e5; border-radius: 8px; margin: 15px 0;">
-                        <strong>(Note: We provide our registration services i.e. ANYWHERE REGISTRATIONS across Andhra Pradesh.)</strong><br>
-                        Whether you are situated in Guntur, Visakhapatnam, Tirupati, or any other region, we provide seamless, legally compliant, and hassle-free registration assistance for every client across the entire state. Our priority is to make your property transactions and documentation processes as smooth and accessible as possible, regardless of your location in AP.
-                    </p>
+                    <p>We provide comprehensive <strong>DTP services</strong>, multi-language typing, document formatting, and preparation for land, house, apartment, plot, bank mortgage, and marriage registration paperwork. ECs, certified copies, and market value assistance are also available.</p>
+                    <aside class="statewide-note">
+                        <i class="fa-solid fa-map-location-dot"></i>
+                        <div><strong>Anywhere registrations across Andhra Pradesh</strong><p>We assist clients throughout the state with clear, accessible document preparation and registration support.</p></div>
+                    </aside>
                     <p><strong>Document Writer:</strong> KANCHARLA RAMADEVI W/o NAGA RAJU</p>
                     <div class="features-grid">
                         <div class="feature-item">
@@ -182,8 +201,14 @@
 
         <section id="contact" class="contact-section container">
             <div class="glass-card contact-content">
-                <h2>Contact Us</h2>
-                <p>Have questions or need assistance with our services? Reach out to SAI TEJA DTP WORK CENTRE.</p>
+                <span class="eyebrow">Get assistance</span>
+                <h2>Talk to us about your document.</h2>
+                <p>Call, email, or visit Sai Teja DTP Work Centre for help choosing the right service.</p>
+
+                <div class="contact-actions">
+                    <a class="contact-button primary" href="tel:+919703585992"><i class="fa-solid fa-phone"></i> Call now</a>
+                    <a class="contact-button" href="mailto:saitejadtpworkcenter@gmail.com"><i class="fa-solid fa-envelope"></i> Send email</a>
+                </div>
 
                 <div class="contact-details">
                     <div class="contact-item">
@@ -222,10 +247,10 @@
 
         <footer class="glass-footer">
             <div class="container footer-content">
-                <p>&copy; 2024 KNRAJU.AP- S.R.O NALLAPADU  SAI TEJA DTP WORK CENTRE. Private Dashboard.</p>
+                <p>&copy; <span id="currentYear">2026</span> Sai Teja DTP Work Centre. Nallapadu, Guntur.</p>
                 <div class="footer-links">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
+                    <a href="#services">Services</a>
+                    <a href="#contact">Contact</a>
                 </div>
             </div>
         </footer>
